@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Halaman Utama Websiteku</title>
-</head>
-<body>
-  <h1>Selamat Datang di Websiteku!</h1>
-  <p>Ini adalah halaman utama website sederhana yang saya buat.</p>
-  <img src="gambar.jpg" alt="Gambar ilustrasi">
-  <ul>
-    <li>Fitur 1</li>
-    <li>Fitur 2</li>
-    <li>Fitur 3</li>
-  </ul>
-</body>
-</html>
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello():
+    return 'Hello, World!'
+
+if __name__ == '__main__':
+    app.run(debug=True)
